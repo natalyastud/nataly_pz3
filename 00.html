@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lego Group - Главная</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        #header {
+            background-color: #b70012;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        #header h1 {
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        #nav {
+            background-color: #FFD700;
+            border-top: 3px solid #b70012;
+            border-bottom: 3px solid #b70012;
+        }
+        
+        #nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+        
+        #nav li {
+            margin: 0;
+        }
+        
+        #nav a {
+            display: block;
+            color: #b70012;
+            padding: 15px 25px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        
+        #nav a:hover {
+            background-color: #b70012;
+            color: white;
+        }
+        
+        #wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            min-height: calc(100vh - 200px);
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+        
+        #sidebar-left {
+            flex: 1;
+            min-width: 250px;
+            padding: 15px;
+            background-color: white;
+            border-radius: 5px;
+            margin-right: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        #sidebar-left ul {
+            list-style: none;
+        }
+        
+        #sidebar-left li {
+            margin-bottom: 10px;
+        }
+        
+        #sidebar-left a {
+            display: block;
+            padding: 10px;
+            background-color: #b70012;
+            color: white;
+            text-decoration: none;
+            border-radius: 3px;
+            transition: background-color 0.3s;
+        }
+        
+        #sidebar-left a:hover {
+            background-color: #FFD700;
+            color: #b70012;
+        }
+        
+        #main {
+            flex: 3;
+            min-width: 300px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        #sidebar-right {
+            flex: 1;
+            min-width: 250px;
+            padding: 15px;
+            margin-left: 10px;
+        }
+        
+        iframe {
+            width: 100%;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        #footer {
+            background-color: #b70012;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            clear: both;
+        }
+        
+        @media (max-width: 768px) {
+            #sidebar-left, #sidebar-right {
+                flex: 100%;
+                margin: 0 0 20px 0;
+            }
+            
+            #nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <h1>Lego Group</h1>
+    </div>
+    <div id="nav">
+        <ul>
+            <li><a href="31.html">О компании</a></li>
+            <li><a href="32.html">История</a></li>
+            <li><a href="33.html">Каталог товаров</a></li>
+        </ul>
+    </div>
+    <div id="wrapper">
+        <div id="sidebar-left">
+            <ul>
+            <li><a href="31.html">О компании</a></li>
+            <li><a href="32.html">История</a></li>
+            <li><a href="33.html">Каталог товаров</a></li>
+            </ul>
+        </div>
+        <div id="main">
+            <h2>Добро пожаловать в мир Lego!</h2>
+            <p>Lego Group - датская компания по производству конструкторов, базирующаяся в Биллунде, Дания. Она производит игрушки под брендом Lego, состоящие в основном из взаимосвязанных пластиковых кубиков.</p>
+            <img src="https://png.pngtree.com/background/20230613/original/pngtree-the-lego-city-picture-image_3395557.jpg" alt="Lego конструктор" style="width:100%; max-width:800px; margin:20px auto; display:block; border-radius:5px;">
+            <p>На нашем сайте вы можете узнать больше о компании, ее истории и просмотреть каталог популярных товаров.</p>
+        </div>
+        <div id="sidebar-right">
+            <iframe src="https://en.wikipedia.org/wiki/Lego" height="500"></iframe>
+        </div>
+    </div>
+    <div id="footer">
+        <p>2025</p>
+    </div>
+</body>
+</html>

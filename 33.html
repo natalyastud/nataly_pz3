@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lego Group - Каталог товаров</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        #header {
+            background-color: #b70012;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        #header h1 {
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        #nav {
+            background-color: #FFD700;
+            border-top: 3px solid #b70012;
+            border-bottom: 3px solid #b70012;
+        }
+        
+        #nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+        
+        #nav li {
+            margin: 0;
+        }
+        
+        #nav a {
+            display: block;
+            color: #b70012;
+            padding: 15px 25px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        
+        #nav a:hover {
+            background-color: #b70012;
+            color: white;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        
+        .content {
+            background-color: white;
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        h2 {
+            color: #b70012;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #FFD700;
+            padding-bottom: 10px;
+        }
+        
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .product-card {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .product-image {
+            width: 80%;
+            height: 225px;
+            object-fit: cover;
+        }
+        
+        .product-info {
+            padding: 15px;
+        }
+        
+        .product-title {
+            font-size: 1.2rem;
+            color: #b70012;
+            margin-bottom: 10px;
+        }
+        
+        .product-price {
+            font-weight: bold;
+            color: #e74c3c;
+            font-size: 1.3rem;
+            margin: 10px 0;
+        }
+        
+        .product-features {
+            margin: 15px 0;
+        }
+        
+        .feature {
+            display: flex;
+            margin-bottom: 8px;
+        }
+        
+        .feature-title {
+            font-weight: bold;
+            min-width: 125px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: #FFD700;
+            color: #b70012;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            text-align: center;
+        }
+        
+        .btn:hover {
+            background-color: #b70012;
+            color: white;
+        }
+        
+        #footer {
+            background-color: #b70012;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        @media (max-width: 768px) {
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            #nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+.button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: blue;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .button:hover {
+            background-color: darkblue;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <h1>Lego Group - Каталог товаров</h1>
+    </div>
+    <div id="nav">
+        <ul>
+            <li><a href="00.html">Главная</a></li>
+            <li><a href="31.html">О компании</a></li>
+            <li><a href="32.html">История</a></li>
+        </ul>
+    </div>
+    <div class="container">
+        <div class="content">
+            <h2>Популярные наборы Lego</h2>
+            
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="https://avatars.mds.yandex.net/get-mpic/6263631/img_id2348910602839994750.jpeg/180x240" alt="Lego набор 1" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-title">Lego Creator Expert Букет цветов</h3>
+                        <div class="product-price">6 929 руб</div>
+                        <div class="product-features">
+                            <div class="feature">
+                                <span class="feature-title">Достоинства:</span>
+                                <span>Качество, интересные детали, оригинальность</span>
+                            </div>
+                            <div class="feature">
+                                <span class="feature-title">Недостатки:</span>
+                                <span>Нет</span>
+                            </div>
+                        </div>
+                        <a href="https://market.yandex.ru/product--creator-expert-10280-buket-tsvetov/1776700321?sku=902909813&uniqueId=924574&do-waremd5=Ibx9oUBODOAmTg47vuJh-w&utm_term=64108932%7C1776700321&clid=1601&utm_source=yandex&utm_medium=search&utm_campaign=ymp_offer_dp_dety_model_mrkscr_bko_dyb_search_rus&utm_content=cid%3A113941013%7Cgid%3A5553020042%7Caid%3A1870951771700345901%7Cph%3A54482379229%7Cpt%3Apremium%7Cpn%3A1%7Csrc%3Ayandex.ru%7Cst%3Asearch%7Crid%3A54482379229%7Ccgcid%3A0&yclid=6827753466111197183" class="btn" target="_blank">Купить</a>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <img src=https://avatars.mds.yandex.net/get-mpic/12520491/2a0000019590eb3fd12c64b863e2567f2101/180x240 alt="Lego набор 2" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-title">Lego Star Wars</h3>
+                        <div class="product-price">17 926 руб</div>
+                        <div class="product-features">
+                            <div class="feature">
+                                <span class="feature-title">Достоинства:</span>
+                                <span>Качество, интересные детали, оригинальность</span>
+                            </div>
+                            <div class="feature">
+                                <span class="feature-title">Недостатки:</span>
+                                <span>У этой серии в некоторых наборах не хватает пары деталей</span>
+                            </div>
+                        </div>
+                        <a href="https://market.yandex.ru/product--star-wars-75380-mos-espa-podrace/1064015322?sku=103826999420&uniqueId=125466163&do-waremd5=mHzowFHWxizJ2zyQ9oboPw&businessId=125466163&clid=1601&utm_source=yandex&utm_medium=search&utm_campaign=ymp_offer_promo_JD_bko_dyb_search_rus&utm_content=cid%3A115962675%7Cgid%3A5513175755%7Caid%3A1860013297450817001%7Cph%3A53689475918%7Cpt%3Apremium%7Cpn%3A7%7Csrc%3Ayandex.ru%7Cst%3Asearch%7Crid%3A53689475918%7Ccgcid%3A0&yclid=15101239695637741567" class="btn" target="_blank">Купить</a>
+                    </div>
+                </div>
+                
+                <div

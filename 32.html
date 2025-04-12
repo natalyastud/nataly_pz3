@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lego Group - История</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        #header {
+            background-color: #b70012;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        #header h1 {
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        #nav {
+            background-color: #FFD700;
+            border-top: 3px solid #b70012;
+            border-bottom: 3px solid #b70012;
+        }
+        
+        #nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+        
+        #nav li {
+            margin: 0;
+        }
+        
+        #nav a {
+            display: block;
+            color: #b70012;
+            padding: 15px 25px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        
+        #nav a:hover {
+            background-color: #b70012;
+            color: white;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        
+        .content {
+            background-color: white;
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        h2 {
+            color: #b70012;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #FFD700;
+            padding-bottom: 10px;
+        }
+        
+        .history-timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .history-timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: #b70012;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+        
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+        }
+        
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            right: -17px;
+            background-color: white;
+            border: 4px solid #FFD700;
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        
+        .left {
+            left: 0;
+        }
+        
+        .right {
+            left: 50%;
+        }
+        
+        .left::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            right: 30px;
+            border: medium solid #b70012;
+            border-width: 10px 0 10px 10px;
+            border-color: transparent transparent transparent #b70012;
+        }
+        
+        .right::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            left: 30px;
+            border: medium solid #b70012;
+            border-width: 10px 10px 10px 0;
+            border-color: transparent #b70012 transparent transparent;
+        }
+        
+        .right::after {
+            left: -16px;
+        }
+        
+        .timeline-content {
+            padding: 20px 30px;
+            background-color: white;
+            position: relative;
+            border-radius: 6px;
+            border: 1px solid #b70012;
+        }
+        
+        .timeline-year {
+            font-weight: bold;
+            color: #b70012;
+            margin-bottom: 10px;
+        }
+        
+        .image-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+        
+        .image-container img {
+            max-width: 45%;
+            height: auto;
+            border-radius: 5px;
+            margin: 10px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        
+        #footer {
+            background-color: #b70012;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        @media screen and (max-width: 600px) {
+            .history-timeline::after {
+                left: 31px;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+            
+            .timeline-item::before {
+                left: 60px;
+                border: medium solid #b70012;
+                border-width: 10px 10px 10px 0;
+                border-color: transparent #b70012 transparent transparent;
+            }
+            
+            .left::after, .right::after {
+                left: 15px;
+            }
+            
+            .right {
+                left: 0%;
+            }
+            
+            .image-container img {
+                max-width: 100%;
+            }
+            
+            #nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <h1>Lego Group - История</h1>
+    </div>
+    <div id="nav">
+        <ul>
+            <li><a href="00.html">Главная</a></li>
+            <li><a href="31.html">О компании</a></li>
+            <li><a href="33.html">Каталог товаров</a></li>
+        </ul>
+    </div>
+    <div class="container">
+        <div class="content">
+            <h2>История Lego Group</h2>
+            
+            <div class="image-container">
+                <img src="https://habrastorage.org/webt/ca/3l/yf/ca3lyfdclayfr0g3exe9pz5w7je.jpeg" alt="Основатель Lego">
+                <img src="https://avatars.dzeninfra.ru/get-zen_doc/271828/pub_668fd850a3f19e58b2d83fa2_668fd88deef5a343425f17b0/scale_1200" alt="Первые Lego">
+            </div>
+            
+            <div class="history-timeline">
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <div class="timeline-year">1932</div>
+                        <p>Компания Lego была основана Оле Кирком Кристиансеном, плотником, чей основной бизнес по производству товаров для дома пострадал из-за Великой депрессии. Первоначально компания производила деревянные игрушки.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <div class="timeline-year">1947</div>
+                        <p>Компания начала производство пластиковых кубиков Lego в Дании.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <div class="timeline-year">1949</div>
+                        <p>Lego начинает производить первые предшественники современных кубиков - "Автоматически соединяющиеся кирпичики".</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <div class="timeline-year">1958</div>
+                        <p>Разработан современный дизайн кубиков Lego с трубками внутри, который обеспечивает лучшее сцепление элементов.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <div class="timeline-year">1968</div>
+                        <p>Открыт первый парк Legoland в Биллунде, Дания.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <div class="timeline-year">1978</div>
+                        <p>Появляются первые минифигурки Lego с подвижными руками и ногами.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <div class="timeline-year">1999</div>
+                        <p>Lego выпускает первую серию Star Wars, которая становится одной из самых успешных в истории компании.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2015</div>
+                        <p>Lego становится крупнейшим производителем игрушек в мире, обогнав Mattel.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <h2>Происхождение названия</h2>
+            <p>Название "LEGO" является сокращением датского слова: "leg godt" (англ.: "играть хорошо"). Однако название также означает на латыни "я собираю", "я сочиняю" или "я читаю". Эти дополнительные значения, первые два из которых очень актуальны, обрели смысл только тогда, когда компания начала делать пластиковые блоки с ручками (кубики лего), чтобы их можно было собирать вместе.</p>
+            
+            <h2>Штаб-квартира</h2>
+            <p>The LEGO Group<br>
+            Оствей 1<br>
+            DK-7190 Биллунд<br>
+            Дания<br>
+            Телефон: +45 79 50 60 70</p>
+        </div>
+    </div>
+    <div id="footer">
+        <p>2025</p>
+    </div>
+</body>
+</html>
